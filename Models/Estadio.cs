@@ -7,6 +7,7 @@ namespace ApiLibertadoresHAS.Models
 {
     public class Estadio
     {
+        //Entor e Heizo
         public int Id { get; set; }
 
         public string Nome { get; set; } = string.Empty;
