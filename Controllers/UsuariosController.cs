@@ -28,7 +28,7 @@ namespace ApiLibertadoresHAS.Controllers
 
         private async Task<bool> UsuarioExistente(string username)
         {
-            if(await _context.TB_USUARIOS.AnyAsync(x => x.Username.ToLower() == username.ToLower()) 
+            if(await _context.TB_USUARIOS.AnyAsync(x => x.Username.ToLower() == username.ToLower()) )
             {
                 return true;
             }
@@ -66,7 +66,7 @@ namespace ApiLibertadoresHAS.Controllers
                 if (await UsuarioExistente(user.Username))
                     throw new System.Exception("Nome de usuario já existe");
 
-                Criptografia.CriarPasswordHash(user.PasswordString, out byte[] hash out byte[] salt);
+                Criptografia.CriarPasswordHash(user.PasswordString, out byte[] hash, out byte[] salt);
                 user.PasswordString = string.Empty;
                 user.PasswordHash = hash;
                 user.PasswordSalt = salt;

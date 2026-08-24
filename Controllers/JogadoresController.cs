@@ -7,9 +7,11 @@ using ApiLibertadoresHAS.Data;
 using ApiLibertadoresHAS.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiLibertadoresHAS.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class JogadoresController : ControllerBase
