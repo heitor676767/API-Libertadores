@@ -20,5 +20,7 @@ namespace ApiLibertadoresHAS.Models
         [NotMapped]
         public string Token { get; set; } = string.Empty;
 
+        public ICollection<Jogador> Jogadores { get; set; } = new List<Jogador>();
+
     }
 }
